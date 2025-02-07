@@ -1,29 +1,20 @@
-# vue-project
+# Portfólio - Leandro Campos
 
-This template should help get you started developing with Vue 3 in Vite.
+![image](https://github.com/user-attachments/assets/894b53c5-e28e-43dd-942a-4324d9ab08fe)
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## Customize configuration
+## 💻 Sobre o projeto
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Projeto de portfólio pessoal desenvolvido com Vue.js, apresentando minha jornada como desenvolvedor, projetos e habilidades técnicas.
 
-## Project Setup
+## 🛠️ Tecnologias Utilizadas
 
-```sh
-npm install
-```
+- Vue.js
+- Bootstrap
+- HTML5
+- CSS3
+- JavaScript
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
