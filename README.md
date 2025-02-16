@@ -1,6 +1,7 @@
 # Portfólio - Leandro Campos
 
-![image](https://github.com/user-attachments/assets/894b53c5-e28e-43dd-942a-4324d9ab08fe)
+![image](https://github.com/user-attachments/assets/2640fb64-abad-4e05-963d-461b287e4a25)
+
 
 
 ![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
