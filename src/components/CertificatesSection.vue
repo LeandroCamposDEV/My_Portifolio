@@ -1,23 +1,25 @@
 <template>
-    <section id="certificados" class="py-5 bg-light">
+    <section id="certificados" class="min-vh-100 py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Certificados e Cursos</h2>
+            <h2 class="text-center display-5 mb-5">Certificados e Cursos</h2>
             <div class="row g-4">
                 <div v-for="cert in certificates" :key="cert.title" class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
+                    <div class="certificate-card h-100">
                         <a :href="cert.link" 
                            :target="isExternalLink(cert.link) ? '_blank' : ''"
                            :download="!isExternalLink(cert.link)"
                            class="text-decoration-none">
-                            <img :src="cert.image" class="card-img-top" :alt="cert.title">
+                            <div class="card-image-wrapper">
+                                <img :src="cert.image" class="card-img-top" :alt="cert.title">
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">{{ cert.title }}</h5>
-                                <p class="card-text text-muted">{{ cert.institution }}</p>
-                                <div class="mt-2">
-                                    <small class="text-primary">
+                                <p class="card-text">{{ cert.institution }}</p>
+                                <div class="view-certificate">
+                                    <span class="certificate-link">
                                         <i class="bi" :class="isExternalLink(cert.link) ? 'bi-arrow-up-right' : 'bi-download'"></i>
                                         {{ isExternalLink(cert.link) ? 'Ver Certificado' : 'Download Certificado' }}
-                                    </small>
+                                    </span>
                                 </div>
                             </div> 
                         </a>
@@ -94,31 +96,99 @@ export default {
 </script>
 
 <style scoped>
-.card {
-    transition: transform 0.3s ease;
+section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding-top: 80px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+h2 {
+    color: #2d2d2d;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
 }
 
 .card-img-top {
-    height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
 }
 
 .card-title {
-    color: #333;
+    color: #2d2d2d;
     font-size: 1.1rem;
+    font-weight: 600;
     line-height: 1.4;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
-.text-primary small {
-    transition: opacity 0.3s ease;
+.card-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
 
-.card:hover .text-primary small {
-    opacity: 0.8;
+.view-certificate {
+    margin-top: auto;
+}
+
+.certificate-link {
+    color: #9b5de5;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.certificate-link i {
+    font-size: 1.1rem;
+}
+
+.certificate-card:hover .certificate-link {
+    color: #00bbf9;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-top: 60px;
+    }
+    
+    .card-image-wrapper {
+        height: 180px;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
 }
 </style>

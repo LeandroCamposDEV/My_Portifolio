@@ -1,20 +1,26 @@
 <template>
-    <section id="projetos" class="py-5 bg-light">
+    <section id="projetos" class="min-vh-100 py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Projetos Pessoais</h2>
+            <h2 class="text-center display-5 mb-5">Projetos Pessoais</h2>
             <div class="row g-4">
                 <div v-for="projeto in projetos" :key="projeto.nome" class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <img :src="projeto.imagem" class="card-img-top" :alt="projeto.nome">
+                    <div class="project-card h-100">
+                        <div class="card-image-wrapper">
+                            <img :src="projeto.imagem" class="card-img-top" :alt="projeto.nome">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ projeto.nome }}</h5>
                             <p class="card-text">{{ projeto.descricao }}</p>
-                            <div class="d-flex flex-wrap gap-2 mb-3">
-                                <span v-for="tech in projeto.tecnologias" :key="tech" class="badge bg-light text-dark">
+                            <div class="tech-stack mb-3">
+                                <span v-for="tech in projeto.tecnologias" 
+                                      :key="tech" 
+                                      class="tech-badge">
                                     {{ tech }}
                                 </span>
                             </div>
-                            <a :href="projeto.link" target="_blank" class="btn btn-primary">
+                            <a :href="projeto.link" 
+                               target="_blank" 
+                               class="btn btn-modern">
                                 Ver Projeto
                             </a>
                         </div>
@@ -87,16 +93,107 @@ export default {
 </script>
 
 <style scoped>
-.card {
-    transition: transform 0.3s ease;
+section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding-top: 80px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+h2 {
+    color: #2d2d2d;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
 }
 
 .card-img-top {
-    height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-badge {
+    background: rgba(155, 93, 229, 0.1);
+    color: #9b5de5;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.btn-modern {
+    background: linear-gradient(135deg, #9b5de5 0%, #00bbf9 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(155, 93, 229, 0.3);
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-top: 60px;
+    }
+    
+    .project-card {
+        margin-bottom: 1rem;
+    }
+    
+    .card-image-wrapper {
+        height: 180px;
+    }
 }
 </style>

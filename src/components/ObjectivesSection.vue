@@ -1,31 +1,38 @@
 <template>
-    <section id="objetivos" class="py-5 bg-light">
+    <section id="objetivos" class="min-vh-100 py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Objetivos Profissionais</h2>
+            <h2 class="text-center display-5 mb-5">Objetivos Profissionais</h2>
             <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card shadow-sm">
-                        <div class="card-body p-4">
-                            <h3 class="h4 mb-4">Curto Prazo</h3>
-                            <ul class="list-unstyled mb-5">
-                                <li v-for="(goal, index) in shortTermGoals" 
-                                    :key="index" 
-                                    class="mb-3 d-flex align-items-center">
-                                    <i class="bi bi-check-circle-fill text-primary me-3"></i>
-                                    {{ goal }}
-                                </li>
-                            </ul>
-
-                            <h3 class="h4 mb-4">Longo Prazo</h3>
-                            <ul class="list-unstyled">
-                                <li v-for="(goal, index) in longTermGoals" 
-                                    :key="index" 
-                                    class="mb-3 d-flex align-items-center">
-                                    <i class="bi bi-star-fill text-primary me-3"></i>
-                                    {{ goal }}
-                                </li>
-                            </ul>
-                        </div>
+                <div class="col-md-6">
+                    <div class="objectives-card mb-4">
+                        <h3 class="card-title">
+                            <i class="bi bi-rocket-takeoff"></i>
+                            Curto Prazo
+                        </h3>
+                        <ul class="goals-list">
+                            <li v-for="(goal, index) in shortTermGoals" 
+                                :key="index" 
+                                class="goal-item">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>{{ goal }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="objectives-card">
+                        <h3 class="card-title">
+                            <i class="bi bi-stars"></i>
+                            Longo Prazo
+                        </h3>
+                        <ul class="goals-list">
+                            <li v-for="(goal, index) in longTermGoals" 
+                                :key="index" 
+                                class="goal-item">
+                                <i class="bi bi-star-fill"></i>
+                                <span>{{ goal }}</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -54,37 +61,95 @@ export default {
 </script>
 
 <style scoped>
-.card {
+section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding-top: 80px;
+}
+
+h2 {
+    color: #2d2d2d;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.objectives-card {
+    background: white;
     border-radius: 15px;
-    border: none;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
 }
 
-.card-body {
-    position: relative;
+.objectives-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.bi-check-circle-fill {
-    font-size: 1.2rem;
-    color: #0d6efd;
+.card-title {
+    color: #2d2d2d;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.bi-star-fill {
-    font-size: 1.2rem;
-    color: #0d6efd;
+.card-title i {
+    color: #9b5de5;
+    font-size: 1.75rem;
 }
 
-li {
-    font-size: 1.1rem;
-    transition: transform 0.2s ease;
+.goals-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-li:hover {
+.goal-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.goal-item:hover {
+    background: rgba(155, 93, 229, 0.05);
     transform: translateX(5px);
 }
 
+.goal-item i {
+    color: #9b5de5;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.goal-item span {
+    color: #4a4a4a;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 @media (max-width: 768px) {
-    li {
-        font-size: 1rem;
+    section {
+        padding-top: 60px;
+    }
+
+    .objectives-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .goal-item {
+        padding: 0.75rem;
     }
 }
 </style>
