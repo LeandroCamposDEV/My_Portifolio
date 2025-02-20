@@ -38,6 +38,13 @@ export default {
         return {
             projetos: [
             {
+                    nome: 'Calculadora de IMC',
+                    descricao: 'Aplicação de Calculo de IMC com React.js',
+                    tecnologias: ['HTML', 'JavaScript', 'React'],
+                    link: 'https://calculadora-imc-omega-eight.vercel.app/',
+                    imagem: '/projects/imc.jpg'
+                },
+            {
                     nome: 'Listas de Tarefas',
                     descricao: 'Aplicação web TODO list com Vue.js',
                     tecnologias: ['HTML', 'JavaScript', 'Vue'],
