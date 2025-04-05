@@ -8,10 +8,7 @@
                         <div class="journey-section mb-5">
                             <h3 class="h4 mb-4">Minha História</h3>
                             <p class="lead">
-                                Hey! Sou um entusiasta da tecnologia que decidiu dar uma guinada na carreira pra mergulhar de cabeça no mundo do desenvolvimento. Depois de anos trabalhando em outra área, percebi que minha verdadeira paixão estava em criar soluções digitais que impactam a vida das pessoas.
-                            </p>
-                            <p class="lead">
-                                Atualmente, estou focado em me tornar um Engenheiro de Software completo, estudando na Estácio e me especializando em desenvolvimento Front-end na EBAC. Cada dia é uma nova descoberta e cada linha de código é um passo em direção ao meu objetivo!
+                                Plot twist profissional! Em um capítulo anterior da minha vida, trabalhei em outra área completamente diferente. Mas a tecnologia sempre foi aquele chamado persistente, até que um dia, aos 35 anos, decidi ouvir. Essa coragem de recomeçar me trouxe até aqui: estudante de Engenharia de Software com um olhar diferenciado sobre problemas e soluções. Com a maturidade de quem já navegou pelas complexidades da vida profissional, trago para o código a serenidade para enfrentar desafios e a sabedoria para priorizar o que realmente importa. Carrego comigo a determinação de quem sabe o valor de construir algo novo e a experiência diversificada que me permite conectar mundos. Enquanto muitos trazem apenas conhecimento técnico, ofereço algo mais valioso: perspectiva. Cada linha de código que escrevo carrega essa história de transformação, propósito e a rica bagagem de quem não tem medo de evoluir, não importa o momento da vida.
                             </p>
                         </div>
 

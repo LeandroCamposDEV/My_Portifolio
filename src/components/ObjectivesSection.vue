@@ -62,32 +62,34 @@ export default {
 
 <style scoped>
 section {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #00bbf9 0%, #1e3a8a 100%);
     padding-top: 80px;
+    position: relative;
+    overflow: hidden;
 }
 
 h2 {
-    color: #2d2d2d;
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 3rem;
 }
 
 .objectives-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     height: 100%;
 }
 
 .objectives-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
-    color: #2d2d2d;
+    color: #1e3a8a;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -97,7 +99,7 @@ h2 {
 }
 
 .card-title i {
-    color: #9b5de5;
+    color: #00bbf9;
     font-size: 1.75rem;
 }
 
@@ -118,18 +120,18 @@ h2 {
 }
 
 .goal-item:hover {
-    background: rgba(155, 93, 229, 0.05);
+    background: rgba(0, 187, 249, 0.1);
     transform: translateX(5px);
 }
 
 .goal-item i {
-    color: #9b5de5;
+    color: #00bbf9;
     font-size: 1.2rem;
     flex-shrink: 0;
 }
 
 .goal-item span {
-    color: #4a4a4a;
+    color: #4a5568;
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -150,6 +152,25 @@ h2 {
 
     .goal-item {
         padding: 0.75rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .objectives-card {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .goal-item {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .goal-item i {
+        font-size: 1rem;
     }
 }
 </style>

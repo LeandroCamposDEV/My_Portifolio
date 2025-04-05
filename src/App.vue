@@ -69,10 +69,9 @@ section {
 }
 
 footer {
-  background: white;
-  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #00bbf9 0%, #1e3a8a 100%);
+  padding: 2rem 0;
   position: relative;
-  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .footer-content {
@@ -80,14 +79,14 @@ footer {
 }
 
 copyright {
-  color: #2d2d2d;
+  color: #ffffff;
   font-weight: 500;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .made-with {
-  color: #666;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -100,7 +99,7 @@ copyright {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #9b5de5 0%, #00bbf9 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: pulse 2s ease-in-out infinite;
@@ -113,7 +112,7 @@ copyright {
 
 @media (max-width: 768px) {
   footer {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
   }
   
   .copyright {
@@ -122,6 +121,20 @@ copyright {
   
   .made-with {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  footer {
+    padding: 1rem 0;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+  }
+  
+  .made-with {
+    font-size: 0.75rem;
   }
 }
 

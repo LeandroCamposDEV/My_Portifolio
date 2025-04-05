@@ -97,28 +97,30 @@ export default {
 
 <style scoped>
 section {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #00bbf9 0%, #1e3a8a 100%);
     padding-top: 80px;
+    position: relative;
+    overflow: hidden;
 }
 
 h2 {
-    color: #2d2d2d;
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 3rem;
 }
 
 .certificate-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     border: none;
 }
 
 .certificate-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .card-image-wrapper {
@@ -143,7 +145,7 @@ h2 {
 }
 
 .card-title {
-    color: #2d2d2d;
+    color: #1e3a8a;
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.4;
@@ -151,7 +153,7 @@ h2 {
 }
 
 .card-text {
-    color: #666;
+    color: #4a5568;
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
@@ -161,7 +163,9 @@ h2 {
 }
 
 .certificate-link {
-    color: #9b5de5;
+    background: linear-gradient(135deg, #00bbf9 0%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 0.9rem;
     font-weight: 500;
     display: flex;
@@ -172,10 +176,9 @@ h2 {
 
 .certificate-link i {
     font-size: 1.1rem;
-}
-
-.certificate-card:hover .certificate-link {
-    color: #00bbf9;
+    background: linear-gradient(135deg, #00bbf9 0%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 768px) {
@@ -189,6 +192,24 @@ h2 {
     
     .card-body {
         padding: 1.25rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-text {
+        font-size: 0.85rem;
+    }
+    
+    .certificate-link {
+        font-size: 0.85rem;
     }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <section id="projetos" class="min-vh-100 py-5">
         <div class="container">
-            <h2 class="text-center display-5 mb-5">Projetos Pessoais</h2>
+            <h2 class="text-center display-4 mb-5">Projetos Pessoais</h2>
             <div class="row g-4">
                 <div v-for="projeto in projetos" :key="projeto.nome" class="col-md-6 col-lg-4">
                     <div class="project-card h-100">
@@ -101,28 +101,30 @@ export default {
 
 <style scoped>
 section {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #00bbf9 0%, #1e3a8a 100%);
     padding-top: 80px;
+    position: relative;
+    overflow: hidden;
 }
 
 h2 {
-    color: #2d2d2d;
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 3rem;
 }
 
 .project-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     border: none;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .card-image-wrapper {
@@ -147,14 +149,14 @@ h2 {
 }
 
 .card-title {
+    color: #1e3a8a;
     font-size: 1.25rem;
     font-weight: 600;
-    color: #2d2d2d;
     margin-bottom: 1rem;
 }
 
 .card-text {
-    color: #666;
+    color: #4a5568;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -167,8 +169,8 @@ h2 {
 }
 
 .tech-badge {
-    background: rgba(155, 93, 229, 0.1);
-    color: #9b5de5;
+    background: rgba(0, 187, 249, 0.1);
+    color: #00bbf9;
     padding: 0.35rem 0.75rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -176,7 +178,7 @@ h2 {
 }
 
 .btn-modern {
-    background: linear-gradient(135deg, #9b5de5 0%, #00bbf9 100%);
+    background: linear-gradient(135deg, #00bbf9 0%, #1e3a8a 100%);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -187,7 +189,7 @@ h2 {
 
 .btn-modern:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(155, 93, 229, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 187, 249, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -201,6 +203,29 @@ h2 {
     
     .card-image-wrapper {
         height: 180px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .tech-badge {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.6rem;
     }
 }
 </style>

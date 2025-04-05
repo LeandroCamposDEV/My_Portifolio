@@ -1,9 +1,5 @@
 <template>
     <section id="inicio" class="min-vh-100 d-flex align-items-center">
-        <div class="geometric-shapes">
-            <div class="shape circle"></div>
-            <div class="shape circle2"></div>
-        </div>
         <div class="container text-center">
             <div class="profile-img-container mb-4">
                 <div class="profile-img-wrapper rounded-circle mx-auto">
@@ -12,15 +8,14 @@
             </div>
             <h1 class="display-4 mb-4 typewriter">Olá, sou Leandro Campos</h1>
             <p class="lead mb-5">
-                Movido pela curiosidade e fascinado pelo poder da tecnologia em transformar o mundo. 
-                Cada projeto é uma nova chance de inovar e criar soluções que fazem a diferença na vida das pessoas.
+                Navegando da curiosidade ao código, estou redesenhando minha trajetória profissional no universo tech. Apaixonado por front-end hoje, visionário full-stack amanhã. Minha missão é dominar as tecnologias que movem o mercado e construir interfaces e sistemas que não apenas funcionem, mas que transformem experiências e simplifiquem vidas.
             </p>
             <div class="button-group">
                 <a href="#projetos" class="btn btn-modern me-3">Ver Projetos</a>
                 <a href="#contato" class="btn btn-outline-modern me-3">Contato</a>
                 <a href="/public/curriculoDev.pdf" 
                    download="Leandro_Campos_CV.pdf"
-                   class="btn btn-outline-dark">
+                   class="btn btn-outline-light">
                    <i class="bi bi-download me-2"></i>Currículo
                 </a>
             </div>
@@ -36,7 +31,7 @@ export default {
 
 <style scoped>
 section {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #00bbf9 0%, #1e3a8a 100%);
     position: relative;
     overflow: hidden;
 }
@@ -55,28 +50,6 @@ section {
     opacity: 0.8;
 }
 
-.circle {
-    width: 50%;
-    height: 100%;    
-    border-radius: 50%;
-    background: #9313e8;
-    left: -40%;
-    animation: float 5s ease-in-out infinite;
-}
-
-.circle2 {
-    width: 50%;
-    height: 100%;
-    border-radius: 50%;
-    background: #10a1d6;
-    right: -40%;
-    left: auto; 
-    animation: float 5s ease-in-out infinite;
-}
-
-.circle, .circle2 {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-}
 
 @keyframes float {
     0% { transform: translateY(0) rotate(0deg); }
@@ -92,13 +65,13 @@ section {
 .profile-img-wrapper {
     width: 300px;
     height: 300px;
-    border: 4px solid #10a1d6;
-    box-shadow: 0 10px 20px rgba(155, 93, 229, 0.2);
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-modern {
-    background: #9b5de5;
-    color: white;
+    background: #ffffff;
+    color: #00bbf9;
     border: none;
     padding: 12px 30px;
     border-radius: 25px;
@@ -106,35 +79,35 @@ section {
 }
 
 .btn-modern:hover {
-    background: #8a4bd0;
+    background: #f8f9fa;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(155, 93, 229, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 .btn-outline-modern {
-    border: 2px solid #00bbf9;
-    color: #00bbf9;
+    border: 2px solid #ffffff;
+    color: #ffffff;
     padding: 12px 30px;
     border-radius: 25px;
     transition: all 0.3s ease;
 }
 
 .btn-outline-modern:hover {
-    background: #00bbf9;
-    color: white;
+    background: #ffffff;
+    color: #00bbf9;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 187, 249, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 .lead {
-    color: #4a4a4a;
+    color: #ffffff;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.8;
 }
 
 h1 {
-    color: #2d2d2d;
+    color: #ffffff;
     font-weight: 600;
 }
 
@@ -209,7 +182,7 @@ h1 {
 
 .typewriter {
     overflow: hidden;
-    border-right: .15em solid #9b5de5;
+    border-right: .15em solid #ffffff;
     white-space: nowrap;
     margin: 0 auto;
     animation: 
@@ -224,7 +197,7 @@ h1 {
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    40% { border-color: #9b5de5 }
+    40% { border-color: #ffffff }
 }
 
 .btn-outline-dark {
